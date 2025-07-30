@@ -9,10 +9,9 @@ public class ArbuzPrank {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Сюрприз 🍉");
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        frame.setUndecorated(true); // Без рамки
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // На весь экран
+        frame.setUndecorated(true); 
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 
-        // Загружаем изображение
         try {
             String imagePath = "Arbuz.png";
             ImageIcon icon = new ImageIcon(imagePath);
@@ -23,20 +22,18 @@ public class ArbuzPrank {
             frame.getContentPane().add(label);
             frame.setVisible(true);
 
-            // Добавим слушатель клавиш
             frame.addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyPressed(KeyEvent e) {
                     if (e.isControlDown() && e.isAltDown() && e.getKeyCode() == KeyEvent.VK_A) {
                         cheatActivated = true;
-                        frame.dispose(); // Закрыть окно
+                        frame.dispose(); 
                     }
                 }
             });
 
-            // Удерживаем окно 5 минут или до активации чит-кода
             int waited = 0;
-            int delay = 200; // проверка каждые 200 мс
+            int delay = 200; 
             while (waited < 5 * 60 * 1000 && !cheatActivated) {
                 Thread.sleep(delay);
                 waited += delay;
