@@ -10,4 +10,4 @@ It looks like a virus, but it's just a harmless (and funny) prank
 - Run the program
 - A fullscreen image of a watermelon takes over the screen
 - The window is borderless and can't be closed with Alt+F4
-- But there's a **secret cheat code**: `Ctrl + Alt + A` to instantly close it
+- But there's a **secret code**: `Ctrl + Alt + A` to instantly close it
